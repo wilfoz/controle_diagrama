@@ -1,0 +1,137 @@
+.legend-content {
+    width: 100%;
+    height: auto;
+    margin-top: 04px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.legend-header h3 {
+    margin: 6px;
+}
+
+// Civil fundações
+
+.legend-civil {
+    margin: 5px 5px;
+    font-size: 12px;
+}
+
+.legend-civil-item {
+    border: solid 1px lightgrey;
+    box-shadow: 2px 2px 3px #ccc;
+    margin: 2px;
+    padding: 2px;
+}
+
+#blank {
+    background-color: white;
+    color: #000;
+}
+#locacao {
+    background-color: steelblue;
+    color: white;
+}
+
+#escavacao {
+    background-color: sienna;
+    color: white;
+}
+
+#ancoragem {
+    background-color: lightsalmon;
+    color: white;
+}
+
+#concretagem {
+    background-color: slategrey;
+    color: white;
+}
+
+
+// Montagem de torres
+
+.legend-content-montagem {
+    width: 100%;
+    height: auto;
+    margin-top: 04px;
+    margin-bottom: 38px;
+    padding: 0;
+}
+
+.legend-montagem {
+    margin: 5px 5px;
+    font-size: 12px;
+}
+
+#premontagem {
+    background-color: lightslategrey;
+}
+
+#icamento {
+    background-color: mediumblue;
+    color: white;
+}
+
+#revisada {
+    background-color: black;
+    color: white;
+}
+
+// Lançamento de cabos
+
+.legend-content-lancamento{
+    width: 100%;
+    height: auto;
+    margin-top: 04px;
+    margin-bottom: 38px;
+    padding: 0;
+}
+
+// Imagem conjunto de icones
+
+.legend-content-grafico {
+    display: flex;
+    align-items: center;
+    border: solid 1px lightgrey;
+    box-shadow: 2px 2px 3px #ccc;
+}
+
+.grafico img {
+    width: 155px;
+    height: 125px;
+    padding: 0px;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.embargo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: auto;
+    height: 18px;
+}
+
+.embargo span {
+    width: auto;
+    height: 100%;
+    margin-left: 8px;
+}
+
+.material-icons.md-18 { 
+    font-size: 18px;
+    padding: 0px;
+}

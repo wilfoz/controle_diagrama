@@ -1,0 +1,85 @@
+<div class="example-container">
+    <div layout="row" layout-align="space-between center" flex
+        class="layout-align-space-between-center layout-row flex">
+        <h1>Diagrama de Produção:</h1>
+
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <h2>Legendas:</h2>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-grid-list cols="4" rowHeight="135px">
+                    <mat-grid-tile>
+                        <div class="legend-content">
+                            <div class="legend-header">
+                                <h3>Civil</h3>
+                            </div>
+                            <div class="legend-civil">
+                                <div id="locacao" class="legend-civil-item">Locação de cavas e pts de fincamentos</div>
+                                <div id="escavacao" class="legend-civil-item">Escavação concluido</div>
+                                <div id="ancoragem" class="legend-civil-item">Ancoragem em rocha concluído</div>
+                                <div id="concretagem" class="legend-civil-item">Concreto in loco - concluído</div>
+                            </div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="legend-content-montagem">
+                            <div class="legend-header">
+                                <h3>Montagem</h3>
+                            </div>
+                            <div class="legend-montagem">
+                                <div id="premontagem" class="legend-civil-item">Torre pré montada</div>
+                                <div id="icamento" class="legend-civil-item">Torre içada</div>
+                                <div id="revisada" class="legend-civil-item">Torre revisada</div>
+                            </div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="legend-content-lancamento">
+                            <div class="legend-header">
+                                <h3>Lançamento</h3>
+                            </div>
+                            <div class="legend-lancamento">
+                                <div id="locacao" class="legend-civil-item">Cabo condutor lançado</div>
+                                <div id="escavacao" class="legend-civil-item">Cabo para-raio lançado</div>
+                                <div id="ancoragem" class="legend-civil-item">Cabo OPGW lançado</div>
+                            </div>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="legend-content-grafico">
+                            <div class="grafico">
+                                <img src="../../../../assets/img/GRAFICO-1.png">
+                            </div>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+        <br>
+        <mat-grid-list [cols]="cols" rowHeight="140px">
+            <mat-grid-tile *ngFor="let card of cards" [attr.rowspan]="1" [attr.colspan]="1">
+                <div class="content">
+
+                    <div [ngSwitch]="card.status" (click)="openDialog(card)">
+
+                        <div class="embargo">
+                            <span *ngIf="card.released === 'EMBARGO'">
+                                <mat-icon class="material-icons md-18" color="accent">info</mat-icon>
+                            </span>
+                        </div>
+
+                        <app-assembly *ngSwitchCase="'MONTAGEM'" [data]="card"></app-assembly>
+                        <app-civil *ngSwitchCase="'CIVIL'" [data]="card"></app-civil>
+                        <div>
+                            <span>{{ card.name }}-{{ card.type }}</span>
+                        </div>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+<button  mat-mini-fab  color="basic" (click)="filePicker.click()">
+    <mat-icon aria-label="upload file">update</mat-icon>
+</button>
+<input type="file" #filePicker (change)="onFileChange($event)" multiple="false" />

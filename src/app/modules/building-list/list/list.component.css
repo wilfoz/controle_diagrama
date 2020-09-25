@@ -1,0 +1,184 @@
+table{
+  width: 100%;
+ }
+
+ .mat-column-project {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 2% !important;
+  width: 2% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+ .mat-column-tower {
+   Word-wrap: break-Word !important;
+   white-space: unset !important;
+   flex: 0 0 4% !important;
+   width: 4% !important;
+   overflow-wrap: break-Word;
+ 
+   -ms-hyphens: auto;
+   -moz-hyphens: auto;
+   -webkit-hyphens: auto;
+   hyphens: auto;
+ }
+ .mat-column-type {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-height {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-vao {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-coords {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-locality {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-status {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-found_MC {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-found_A {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-found_B {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-found_C {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-found_D {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-update {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.mat-column-delete {
+  Word-wrap: break-Word !important;
+  white-space: unset !important;
+  flex: 0 0 6% !important;
+  width: 6% !important;
+  overflow-wrap: break-Word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

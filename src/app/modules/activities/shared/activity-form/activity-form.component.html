@@ -1,0 +1,28 @@
+<form [formGroup]="form">
+
+  <mat-form-field class="full-width">
+    <mat-label>Etapa</mat-label>
+    <select matNativeControl required formControlName="group">
+      <option value="CIVIL">CIVIL</option>
+      <option value="MONTAGEM">MONTAGEM</option>
+      <option value="LANÇAMENTO">LANÇAMENTO</option>
+    </select>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput type="text" placeholder="Atividade:" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput type="text" placeholder="Unidade:" formControlName="unity">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Marco</mat-label>
+    <select matNativeControl required formControlName="mark">
+      <option value="SIM">SIM</option>
+      <option value="NÃO">NÃO</option>
+    </select>
+  </mat-form-field>
+
+</form>
