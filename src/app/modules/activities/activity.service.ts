@@ -8,6 +8,6 @@ import { BaseResourceService } from 'src/app/shared/service/base-service-resourc
 export class ActivityService extends BaseResourceService<Activity> {
 
   constructor(protected injector: Injector) {
-    super('http://localhost:3000/api/activities', injector, Activity.fromJson);
+    super('http://localhost:3000/activity', injector, Activity.fromJson);
   }
 }

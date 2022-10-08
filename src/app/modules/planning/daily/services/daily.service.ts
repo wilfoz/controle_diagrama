@@ -4,7 +4,7 @@ import { Activity } from '../../../activities/shared/activity';
 import { tap, take, map } from 'rxjs/operators';
 import { BuildingListService } from '../../../building-list/shared/building-list.service';
 
-const URL = 'http://localhost:3000/api/production/';
+const URL = 'http://localhost:3000/production/';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class DailyService extends BaseResourceService<Activity>{
     private buildingListService: BuildingListService
 
   ) {
-    super('http://localhost:3000/api/activities', injector, Activity.fromJson);
+    super('http://localhost:3000/activity', injector, Activity.fromJson);
   }
 
   getTotalTowers = () => {

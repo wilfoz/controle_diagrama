@@ -42,10 +42,7 @@ export class ListNewComponent extends BaseFormsResourceComponent<BuildingList> i
       name: [null, [Validators.required, Validators.maxLength(10)]],
       type: [null, [Validators.required, Validators.maxLength(8)]],
       locality: [null, [Validators.required, Validators.maxLength(30)]],
-      coords: this.formBuilder.group({
-        lat: [null, [Validators.required, Validators.pattern(this.floatPattern)]],
-        lng: [null, [Validators.required, Validators.pattern(this.floatPattern)]],
-      }),
+      coordinates: [null, [Validators.required]],
       forward: [null, [Validators.required, Validators.minLength(1)]],
       height: [null, [Validators.required, Validators.minLength(1)]],
       released: [null, [Validators.required]],
@@ -59,21 +56,15 @@ export class ListNewComponent extends BaseFormsResourceComponent<BuildingList> i
 
   protected executeListAction(listFormValue) {
 
-    const { project, name, type, locality, released, foundation_MC, foundation_A, foundation_B, foundation_C, foundation_D } = listFormValue;
-
-    const lat = listFormValue.coords.lat;
-    const lng = listFormValue.coords.lng;
+    const { project, name, type, locality, released, coordinates, foundation_MC, foundation_A, foundation_B, foundation_C, foundation_D } = listFormValue;
 
     this.list = {
       project,
       name,
       type,
       locality,
-      coords: {
-        coordinates: [lng, lat]
-      },
+      coordinates,
       forward: +listFormValue.forward,
-      weight: +listFormValue.weight,
       height: +listFormValue.height,
       released,
       foundation_MC,
@@ -84,6 +75,7 @@ export class ListNewComponent extends BaseFormsResourceComponent<BuildingList> i
     };
 
     this.createResource(this.list);
+    console.log(this.list)
     this.router.navigate(['building-list']);
   }
 

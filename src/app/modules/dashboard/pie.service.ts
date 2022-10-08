@@ -12,8 +12,8 @@ export class PieService extends BaseResourceService<BuildingList> {
   constructor(
     protected injector: Injector,
     private buildingListService: BuildingListService,
-  ) { 
-    super('http://localhost:3000/api/productions', injector, BuildingList.fromJson);
+  ) {
+    super('http://localhost:3000/production', injector, BuildingList.fromJson);
   }
 
   private getRealeased(arg: string) {

@@ -17,7 +17,7 @@ export class ProductionMonitoringService extends BaseResourceService<Production>
     protected injector: Injector,
     private buildingListService: BuildingListService
     ) {
-    super('http://localhost:3000/api/productions', injector, Production.fromJson);
+    super('http://localhost:3000/production', injector, Production.fromJson);
   }
 
   public getBuildingList = () => {
@@ -37,12 +37,12 @@ export class ProductionMonitoringService extends BaseResourceService<Production>
           foundation_MCF: foundation_MC,
           foundation_A,
           foundation_B,
-          foundation_C, 
+          foundation_C,
           foundation_D
         }
       })
       return list;
-    }), 
+    }),
     map(data => data.sort((a, b) => a.project - b.project)),
     catchError(this.handleError)
    ).subscribe(

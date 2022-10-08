@@ -6,13 +6,10 @@ export class BuildingList extends BaseResourceModel {
     public project?: number,
     public name?: string,
     public type?: string,
-    public locality?: string,
-    public coords?: {
-      coordinates: string[]
-    },
-    public forward?: number,
-    public weight?: number,
     public height?: number,
+    public locality?: string,
+    public coordinates?: string,
+    public forward?: number,
     public released?: string,
     public foundation_MC? : string,
     public foundation_A? : string,

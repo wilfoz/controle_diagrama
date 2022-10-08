@@ -5,7 +5,7 @@ import { map, tap } from 'rxjs/operators';
 import { Observable, BehaviorSubject } from 'rxjs';
 import * as moment from 'moment';
 
-const URL = 'http://localhost:3000/api/production/';
+const URL = 'http://localhost:3000/production/';
 
 @Injectable({
   providedIn: 'root'
@@ -116,7 +116,7 @@ export class WeeklyScheduleService {
   }
 
   protected addNextPlanned = (obj, currObj) => {
-    
+
     const { Sunday: { nextPlanned: sunday }, Monday: { nextPlanned: monday }, Tuesday: { nextPlanned: tuesday },
       Wednesday: { nextPlanned: wednesday }, Thursday: { nextPlanned: thursday }, Friday: { nextPlanned: friday } } = obj;
 

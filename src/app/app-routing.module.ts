@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { LoginComponent } from './modules/login/login.component';
+import { SignupComponent } from './modules/signup/signup.component';
 
 const routes: Routes = [{
   path: '',
@@ -10,7 +12,7 @@ const routes: Routes = [{
     path: '',
     component: DashboardComponent
   }, {
-    path: 'production', 
+    path: 'production',
     loadChildren: () => import('./modules/planning/planning.module').then(mod => mod.PlanningModule)
   }, {
     path: 'building-list',
@@ -24,6 +26,10 @@ const routes: Routes = [{
   }, {
     path: 'work-teams',
     loadChildren: () => import('./modules/work-teams/work-teams.module').then(mod => mod.WorkTeamsModule)
+  }, {
+    path: 'login', component: LoginComponent
+  }, {
+    path: 'signup', component: SignupComponent
   }]
 }];
 

@@ -36,14 +36,11 @@
 
           </div>
 
-          <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between start" formGroupName="coords">
-            <mat-form-field appearance="outline" fxFlex="48">
-              <input matInput type="text" placeholder="Latitude:" formControlName="lat">
-              <mat-label>Latitude:</mat-label>
-            </mat-form-field>
-            <mat-form-field appearance="outline" fxFlex="48">
-              <input matInput type="text" placeholder="Longitude:" formControlName="lng">
-              <mat-label>Longitude:</mat-label>
+          <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between start">
+            <mat-form-field appearance="outline" fxFlex="96">
+              <input matInput type="text" placeholder="Coordenadas:" formControlName="coordinates">
+              <mat-label>Coordenadas:</mat-label>
+              <mat-error *ngIf="hasError('coordinates', 'required')">Coordenadas sao obrigatorias</mat-error>
             </mat-form-field>
           </div>
 
@@ -95,12 +92,12 @@
           <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between  start">
 
             <mat-form-field appearance="outline" fxFlex="48">
-              <input matInput type="text" placeholder="Fundação C:" formControlName="foundation_C">
+              <input matInput type="text" placeholder="Fundação A:" formControlName="foundation_A">
               <mat-label>Fundação - A:</mat-label>
             </mat-form-field>
 
             <mat-form-field appearance="outline" fxFlex="48">
-              <input matInput type="text" placeholder="Fundação D:" formControlName="foundation_C">
+              <input matInput type="text" placeholder="Fundação B:" formControlName="foundation_B">
               <mat-label>Fundação - B:</mat-label>
             </mat-form-field>
 
@@ -114,7 +111,7 @@
             </mat-form-field>
 
             <mat-form-field appearance="outline" fxFlex="48">
-              <input matInput type="text" placeholder="Fundação D:" formControlName="foundation_C">
+              <input matInput type="text" placeholder="Fundação D:" formControlName="foundation_D">
               <mat-label>Fundação - D:</mat-label>
             </mat-form-field>
 

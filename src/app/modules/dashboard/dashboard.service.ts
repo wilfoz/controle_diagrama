@@ -22,7 +22,7 @@ export class DashBoardService extends BaseResourceService<Production> {
         private buildingListService: BuildingListService,
         private productionService: ProductionService,
     ) {
-        super('http://localhost:3000/api/productions', injector, Production.fromJson);
+        super('http://localhost:3000/production', injector, Production.fromJson);
     }
 
     // BAR

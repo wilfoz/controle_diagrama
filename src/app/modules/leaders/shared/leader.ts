@@ -4,6 +4,7 @@ export class Leader extends BaseResourceModel {
 
   constructor(
     public _id?: string,
+    public record?: string,
     public name?: string,
     public office?: string,
     // tslint:disable-next-line:variable-name

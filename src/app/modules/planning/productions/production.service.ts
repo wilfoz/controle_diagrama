@@ -8,13 +8,12 @@ import { LeadersService } from '../../leaders/leaders.service';
 import { BuildingList } from '../../building-list/shared/models/building-list';
 import { Activity } from '../../activities/shared/activity';
 import { Leader } from '../../leaders/shared/leader';
-import { tap, take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductionService extends BaseResourceService<Production> {
-  
+
   private towers$ = new BehaviorSubject<BuildingList[]>([]);
   private activities$ = new BehaviorSubject<Activity[]>([]);
 
@@ -24,7 +23,7 @@ export class ProductionService extends BaseResourceService<Production> {
     private activityService: ActivityService,
     private leadersService: LeadersService,
     ) {
-    super('http://localhost:3000/api/productions', injector, Production.fromJson);
+    super('http://localhost:3000/production', injector, Production.fromJson);
   }
 
   getAllProductions(): Observable<Production[]> {
@@ -50,6 +49,6 @@ export class ProductionService extends BaseResourceService<Production> {
   getTowerIDByName = (tower) => {
     return this.getAllActivities().subscribe(activites => activites.find(act => act.name === tower)._id)
   };
-  
+
 
 }

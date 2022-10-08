@@ -29,10 +29,7 @@ export class ListDetailComponent implements OnInit {
       name: new FormControl(this.buildingList.name, Validators.required),
       type: new FormControl(this.buildingList.type, Validators.required),
       locality: new FormControl(this.buildingList.locality, [Validators.required]),
-      coords: new FormGroup({
-        lat: new FormControl(this.buildingList.coords.coordinates[0], [Validators.required]),
-        lng: new FormControl(this.buildingList.coords.coordinates[1], [Validators.required]),
-      }),
+      coordinates: new FormControl(this.buildingList.coordinates, [Validators.required]),
       forward: new FormControl(this.buildingList.forward, Validators.required),
       height: new FormControl(this.buildingList.height, Validators.required),
       released: new FormControl(this.buildingList.released, Validators.required),
@@ -57,10 +54,7 @@ export class ListDetailComponent implements OnInit {
   }
 
   setBuildingList = (form) => {
-    const { project, name, type, locality, released, foundation_MC, foundation_A, foundation_B, foundation_C, foundation_D } = form;
-
-    const lat = form.coords.lat;
-    const lng = form.coords.lng;
+    const { project, name, type, locality, coordinates, released, foundation_MC, foundation_A, foundation_B, foundation_C, foundation_D } = form;
 
     const list = {
       _id: form.id,
@@ -68,11 +62,8 @@ export class ListDetailComponent implements OnInit {
       name,
       type,
       locality,
-      coords: {
-        coordinates: [lng, lat]
-      },
+      coordinates,
       forward: +form.forward,
-      weight: +form.weight,
       height: +form.height,
       released,
       foundation_MC,

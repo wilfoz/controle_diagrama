@@ -22,11 +22,11 @@ export class ListComponent extends BaseListComponent<BuildingList> implements On
     'vao',
     'locality',
     'status',
-    'found_MC',
-    'found_A',
-    'found_B',
-    'found_C',
-    'found_D',
+    'foundation_MC',
+    'foundation_A',
+    'foundation_B',
+    'foundation_C',
+    'foundation_D',
     'update',
     'delete'
   ];
@@ -35,8 +35,8 @@ export class ListComponent extends BaseListComponent<BuildingList> implements On
     private buildingListService: BuildingListService,
     protected injector: Injector,
     private dialog: MatDialog
-  ) { 
-    super(injector, buildingListService); 
+  ) {
+    super(injector, buildingListService);
   }
 
   ngOnInit () {
@@ -51,20 +51,18 @@ export class ListComponent extends BaseListComponent<BuildingList> implements On
           project: l[0],
           name: l[1],
           type: l[2],
-          locality: l[3],
-          coords: {
-            coordinates: [l[4], l[5]]
-          },
-          weight: l[6],
-          height: l[7],
-          forward: l[8],
-          released: l[9],
-          foundation_MC: l[10],
-          foundation_A: l[11],
-          foundation_B: l[12],
-          foundation_C: l[13],
-          foundation_D: l[14],
+          height: l[3],
+          locality: l[4],
+          coordinates: `${l[5], l[6]}`,
+          forward: l[7],
+          released: l[8],
+          foundation_MC: l[9],
+          foundation_A: l[10],
+          foundation_B: l[11],
+          foundation_C: l[12],
+          foundation_D: l[13],
         };
+        console.log(line)
         this.createListItem(line);
       }
     });

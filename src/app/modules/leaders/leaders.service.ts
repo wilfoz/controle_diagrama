@@ -8,6 +8,6 @@ import { Leader } from './shared/leader';
 export class LeadersService extends BaseResourceService<Leader> {
 
   constructor(protected injector: Injector) {
-    super('http://localhost:3000/api/leaders', injector, Leader.fromJson);
+    super('http://localhost:3000/employee', injector, Leader.fromJson);
   }
 }
