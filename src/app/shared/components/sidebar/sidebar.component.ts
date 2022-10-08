@@ -10,7 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class SidebarComponent {
 
-  @ViewChild('start', { static: false }) appDrawer: ElementRef;
+  @ViewChild('start') appDrawer: ElementRef;
 
   navItems = [
     {

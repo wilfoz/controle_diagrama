@@ -1,10 +1,11 @@
-import { OnInit, Injector, ViewChild } from '@angular/core';
+import { OnInit, Injector, ViewChild, Directive } from '@angular/core';
 import { BaseResourceModel } from '../../../model/base-resource.model';
 import { BaseResourceService } from '../../../service/base-service-resource';
 import { MatSnackBar, MatPaginator, MatSort, MatTableDataSource, PageEvent } from '@angular/material';
 import { tap, map } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 
+@Directive()
 export abstract class BaseListComponent<T extends BaseResourceModel> implements OnInit {
 
   public dataSource = new MatTableDataSource();
@@ -18,8 +19,8 @@ export abstract class BaseListComponent<T extends BaseResourceModel> implements 
   public currentPage = 1;
   public pageSizeOptions: number[] = [10, 25, 100];
 
-  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor(
     protected injector: Injector,
